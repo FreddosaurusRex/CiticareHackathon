@@ -9,9 +9,6 @@ import {
   Card
 } from "react-materialize";
 
-// How should get a traumatized child help at their public school?
-// What is the best way to talk to a child about a traumatic event in a therapeutic way?
-
 export default class MedicalQA extends Component {
   state = {
     questions: [
@@ -31,6 +28,17 @@ export default class MedicalQA extends Component {
           "Who is someone that I can go to for gunshot trauma therapy for my child after 10 pm?",
         a: 3,
         lastAnswered: "17h"
+      },
+      {
+        q: "How should get a traumatized child help at their public school?",
+        a: 1,
+        lastAnswered: "7d"
+      },
+      {
+        q:
+          "What is the best way to talk to a child about a traumatic event in a therapeutic way?",
+        a: 24,
+        lastAnswered: "18d"
       }
     ],
     comments: [
@@ -38,6 +46,11 @@ export default class MedicalQA extends Component {
         author: "Doctor M.D.",
         authorCreds: "Therapist at Hartford Hospital",
         answer: "Professional answer goes here."
+      },
+      {
+        author: "John Bard",
+        authorCreds: "Community Leader",
+        answer: "Life experience goes here."
       }
     ]
   };

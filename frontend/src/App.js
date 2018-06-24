@@ -4,13 +4,14 @@ import { Row } from "react-materialize";
 
 import Sidebar from "./components/Sidebar";
 import IncidentMap from "./components/IncidentMap";
-import ThirdPage from "./components/ThirdPage";
 import MedicalQA from "./components/MedicalQA";
+import CasePage from "./components/CasePage";
+import Resources from "./components/Resources";
 require("dotenv").config();
 
 export default class App extends Component {
   state = {
-    page: 2
+    page: 3
   };
 
   setPage = page => this.setState({ page });
@@ -19,10 +20,12 @@ export default class App extends Component {
     switch (this.state.page) {
       case 0:
         return <IncidentMap />;
-      case 1:
-        return <ThirdPage />;
       case 2:
         return <MedicalQA />;
+      case 3:
+        return <Resources />;
+      case 5:
+        return <CasePage />;
       default:
         return <Fragment />;
     }

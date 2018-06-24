@@ -6,7 +6,7 @@ export default class Sidebar extends Component {
     cases: [
       {
         isHome: false,
-        name: "Jasmine OurGirl",
+        name: "Jasmine Hudson",
         notifications: 1
       },
       {
@@ -73,16 +73,17 @@ export default class Sidebar extends Component {
           </Badge>
         </SideNavItemPage>
         {this.state.cases.map((openCase, i) => (
-          <SideNavItem
+          <SideNavItemPage
             key={i}
             waves
+            page={5 + i}
             icon={openCase.isHome ? "home" : "person_pin"}
           >
             {openCase.name}{" "}
             {openCase.notifications > 0 ? (
               <Badge newIcon>{openCase.notifications}</Badge>
             ) : null}
-          </SideNavItem>
+          </SideNavItemPage>
         ))}
       </SideNav>
     );
