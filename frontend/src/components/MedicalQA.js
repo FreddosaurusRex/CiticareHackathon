@@ -6,7 +6,7 @@ import {
   CollectionItem,
   Navbar,
   Divider,
-  Card
+  Card, Button
 } from "react-materialize";
 
 export default class MedicalQA extends Component {
@@ -83,13 +83,13 @@ export default class MedicalQA extends Component {
             paddingRight: "30px"
           }}
         >
-          <h2>{this.state.questions[0].q}</h2>
+          <h4>{this.state.questions[0].q}</h4>
           <Divider />
           {this.state.comments.map((comment, i) => (
             <Card
               key={i}
               horizontal
-              actions={[<a href="#">REPLY</a>]}
+              actions={[<Button href="#">REPLY</Button>]}
               title={comment.author}
             >
               <b>{comment.authorCreds}</b>
