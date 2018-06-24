@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import {Circle, GoogleMap, InfoWindow, withGoogleMap, withScriptjs} from "react-google-maps";
-import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
-import {Button, Card, CardTitle, Col} from "react-materialize";
+import {Circle, GoogleMap, InfoWindow, Marker, withGoogleMap, withScriptjs} from "react-google-maps";
+import {Button} from "react-materialize";
 
 // const icon = {
 //   path: "M 0 0 L 200 0 L 100 200 z",
@@ -9,7 +8,6 @@ import {Button, Card, CardTitle, Col} from "react-materialize";
 //   strokeColor: "blue",
 //   strokeWidth: 3
 // };
-
 
 const MapWithAMarker = withScriptjs(
   withGoogleMap(props => (
@@ -20,13 +18,13 @@ const MapWithAMarker = withScriptjs(
         options={{strokeColor: "red", fillColor: "red"}}
       />
       <InfoWindow position={{lat: 41.759468, lng: -72.679152}}>
-        <div style={{ lineHeight: 1.8}}>
+        <div style={{lineHeight: 1.8}}>
           <b>68 Wadsworth Street</b>
-          <br />
+          <br/>
           3 recent incidents
-          <br />
+          <br/>
           Last incident: 2h
-          <br />
+          <br/>
           <Button style={{marginLeft: "20px"}} waves='light'>Take Case</Button>
         </div>
       </InfoWindow>
