@@ -22,6 +22,18 @@ export default class Sidebar extends Component {
     ]
   };
   render() {
+    let SideNavItemPage = props => (
+      <SideNavItem
+        className={props.page == this.props.page ? "active" : null}
+        onClick={() => {
+          console.log(props.page);
+          this.props.setPage(props.page);
+        }}
+        {...props}
+      >
+        {props.children}
+      </SideNavItem>
+    );
     return (
       <SideNav className="sidenav sidenav-fixed" id="sidebar">
         <SideNavItem
@@ -35,26 +47,37 @@ export default class Sidebar extends Component {
             email: "lauren@ymca.com"
           }}
         />
-        <SideNavItem icon="question_answer">
-          MEDICAL Q&A
-          <Badge newIcon>1</Badge>
-        </SideNavItem>
-        <SideNavItem icon="folder_shared">Resources</SideNavItem>
-        <SideNavItem divider />
+
         <SideNavItem subheader icon="hearing">
           INCIDENTS
         </SideNavItem>
-        <SideNavItem icon="update">Last 24 Hours</SideNavItem>
-        <SideNavItem icon="update">Last 7 Days</SideNavItem>
+        <SideNavItemPage icon="update" page={0}>
+          Last 24 Hours
+        </SideNavItemPage>
+        <SideNavItemPage icon="update" page={1}>
+          Last 7 Days
+        </SideNavItemPage>
         <SideNavItem divider />
-        <SideNavItem subheader icon="business_center">
+        <SideNavItemPage icon="question_answer" page={2}>
+          Medical Q&A
+          <Badge newIcon>1</Badge>
+        </SideNavItemPage>
+        <SideNavItemPage icon="folder_shared" page={3}>
+          Resources
+        </SideNavItemPage>
+        <SideNavItem divider />
+        <SideNavItemPage subheader icon="business_center" page={4}>
           CASES
           <Badge>
             <Icon>settings</Icon>
           </Badge>
-        </SideNavItem>
-        {this.state.cases.map(openCase => (
-          <SideNavItem waves icon={openCase.isHome ? "home" : "person_pin"}>
+        </SideNavItemPage>
+        {this.state.cases.map((openCase, i) => (
+          <SideNavItem
+            key={i}
+            waves
+            icon={openCase.isHome ? "home" : "person_pin"}
+          >
             {openCase.name}{" "}
             {openCase.notifications > 0 ? (
               <Badge newIcon>{openCase.notifications}</Badge>

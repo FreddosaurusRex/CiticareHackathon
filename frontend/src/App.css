@@ -11,8 +11,13 @@
   color: #f0f0f0;
 }
 
-#sidebar a:hover {
+#sidebar a:hover,
+#sidebar li.active {
   background: #6698c8;
+}
+
+#sidebar .userView a:hover {
+  background: inherit !important;
 }
 
 .divider {

@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { Icon } from "react-materialize";
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  Marker,
   Circle
 } from "react-google-maps";
 
