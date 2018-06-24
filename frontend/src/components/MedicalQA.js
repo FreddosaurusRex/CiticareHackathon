@@ -1,26 +1,73 @@
-import React, {Component} from "react";
-import {Col, Icon, Input, Navbar, NavItem, Row} from "react-materialize";
-
-const headerText = {
-  fontSize: '30px',
-  textAlign: 'center',
-};
+import React, { Component } from "react";
+import {
+  Col,
+  Row,
+  Collection,
+  CollectionItem,
+  Navbar,
+  Divider,
+  Card
+} from "react-materialize";
 
 export default class MedicalQA extends Component {
+  state = {
+    questions: [
+      {
+        q: "How do I convince someone...",
+        a: 2,
+        lastAnswered: "3h"
+      }
+    ],
+    comments: [
+      {
+        author: "Doctor M.D.",
+        authorCreds: "Therapist at Hartford Hospital",
+        answer: "yeah yeah yeah"
+      }
+    ]
+  };
   render() {
     return (
-      <div>
-        <Navbar right brand="Your Q&A" style={{backgroundColor:'#F0F0F0', color:"#707070"}}>
-          <NavItem style={{color:"#707070"}}>Home</NavItem>
-          <NavItem>Ask</NavItem>
-          <NavItem>Notification</NavItem>
-          <Input type='search' label='search' icon='search' style={{padding:'25px', width:'30vw'}}/>
-        </Navbar>
-        <Row>
-          <Col s={2}>1</Col>
-          <Col s={10}>2</Col>
-        </Row>
-      </div>
+      <Row id="qa" style={{ borderRight: "1px solid black" }}>
+        <Col s={4}>
+          <Navbar brand="Q&A" />
+          <Collection>
+            {this.state.questions.map((question, i) => (
+              <CollectionItem key={i} active href="#">
+                {question.q}
+                <br />
+                <font style={{ color: "lightgrey" }}>
+                  {question.a} answers · {question.lastAnswered}
+                </font>
+              </CollectionItem>
+            ))}
+          </Collection>
+        </Col>
+        <Col
+          s={8}
+          style={{
+            paddingLeft: "35px",
+            paddingTop: "30px",
+            paddingRight: "30px"
+          }}
+        >
+          <h2>How do I convince someone to do something?</h2>
+          <Divider />
+          {this.state.comments.map((comment, i) => (
+            <Card
+              key={i}
+              horizontal
+              actions={[<a href="#">REPLY</a>]}
+              title={comment.author}
+            >
+              <b>{comment.authorCreds}</b>
+              <br />
+              <br />
+              <p>{comment.answer}</p>
+            </Card>
+          ))}
+        </Col>
+      </Row>
     );
   }
 }

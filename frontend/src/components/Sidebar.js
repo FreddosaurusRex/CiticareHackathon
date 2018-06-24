@@ -24,7 +24,7 @@ export default class Sidebar extends Component {
   render() {
     let SideNavItemPage = props => (
       <SideNavItem
-        className={props.page == this.props.page ? "active" : null}
+        className={props.page === this.props.page ? "active" : null}
         onClick={() => {
           console.log(props.page);
           this.props.setPage(props.page);
@@ -42,9 +42,9 @@ export default class Sidebar extends Component {
             background:
               "https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1234685/300/200/m1/fpc/wm0/jndkt9hi4wl8d9ryurfaeaff9ybhjkgevz0vh1pom8ztm6roz4lmyi7lvgkjpqf4-.jpg?1462294980&s=cfb75443e02e4d745da2fa6070f1b955",
             image:
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/YMCA-SVG-Common_International.svg/1200px-YMCA-SVG-Common_International.svg.png",
-            name: "Lauren OurGirl",
-            email: "lauren@ymca.com"
+              "https://cdn4.iconfinder.com/data/icons/eldorado-culture/40/books_2-512.png",
+            name: "Carol Smith",
+            email: "carol.smith@hplct.org"
           }}
         />
 

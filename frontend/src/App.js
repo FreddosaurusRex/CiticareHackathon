@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./App.css";
 import { Row } from "react-materialize";
 
@@ -10,7 +10,7 @@ require("dotenv").config();
 
 export default class App extends Component {
   state = {
-    page: 0
+    page: 2
   };
 
   setPage = page => this.setState({ page });
@@ -22,7 +22,9 @@ export default class App extends Component {
       case 1:
         return <ThirdPage />;
       case 2:
-        return <MedicalQA/>;
+        return <MedicalQA />;
+      default:
+        return <Fragment />;
     }
   }
 

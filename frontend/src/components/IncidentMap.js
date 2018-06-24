@@ -6,12 +6,12 @@ import {
   Circle
 } from "react-google-maps";
 
-const icon = {
-  path: "M 0 0 L 200 0 L 100 200 z",
-  fillColor: "red",
-  strokeColor: "blue",
-  strokeWidth: 3
-};
+// const icon = {
+//   path: "M 0 0 L 200 0 L 100 200 z",
+//   fillColor: "red",
+//   strokeColor: "blue",
+//   strokeWidth: 3
+// };
 
 const MapWithAMarker = withScriptjs(
   withGoogleMap(props => (
