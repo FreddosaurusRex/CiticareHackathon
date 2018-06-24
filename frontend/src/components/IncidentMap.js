@@ -17,22 +17,17 @@ const MapWithAMarker = withScriptjs(
         radius={152.4}
         options={{strokeColor: "red", fillColor: "red"}}
       />
-      {/*<Marker
-        position={{lat: 41.759468, lng: -72.679152}}
-        onClick={this.setState({isOpen: !this.isOpen})}
-      >
-        {props.isOpen && <InfoWindow onCloseClick={this.setState({isOpen: !this.isOpen})}>
-          <div style={{ lineHeight: 1.8}}>
-            <b>68 Wadsworth Street</b>
-            <br />
-            3 recent incidents
-            <br />
-            Last incident: 2h
-            <br />
-            <Button style={{marginLeft: "20px"}} waves='light'>Take Case</Button>
-          </div>
-        </InfoWindow>}
-      </Marker>*/}
+      <InfoWindow position={{lat: 41.759468, lng: -72.679152}}>
+        <div style={{lineHeight: 1.8}}>
+          <b>68 Wadsworth Street</b>
+          <br/>
+          3 recent incidents
+          <br/>
+          Last incident: 2h
+          <br/>
+          <Button style={{marginLeft: "20px"}} waves='light'>Take Case</Button>
+        </div>
+      </InfoWindow>
     </GoogleMap>
   ))
 );
