@@ -3,7 +3,8 @@
   margin-bottom: 0;
 }
 
-#sidebar {
+#sidebar,
+nav {
   background: #303e4d;
 }
 
