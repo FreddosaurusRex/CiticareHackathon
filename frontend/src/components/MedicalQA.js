@@ -14,7 +14,7 @@ export default class MedicalQA extends Component {
     questions: [
       {
         q:
-          "Where should I go to get help for a my child who has extreme anxiety after gunfight?",
+          "Where should I go to get help for my child who has extreme anxiety after gunfight?",
         a: 2,
         lastAnswered: "3h"
       },

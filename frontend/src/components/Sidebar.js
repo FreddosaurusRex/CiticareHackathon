@@ -66,12 +66,12 @@ export default class Sidebar extends Component {
           Resources
         </SideNavItemPage>
         <SideNavItem divider />
-        <SideNavItemPage subheader icon="business_center" page={4}>
+        <SideNavItem subheader icon="business_center">
           CASES
           <Badge>
             <Icon>settings</Icon>
           </Badge>
-        </SideNavItemPage>
+        </SideNavItem>
         {this.state.cases.map((openCase, i) => (
           <SideNavItemPage
             key={i}
