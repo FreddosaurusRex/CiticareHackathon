@@ -5,19 +5,19 @@ export default class CasePage extends Component {
   state = {
     locations: [
       {
-        name: "Downtown YMCA",
-        address: "90 State House Square, Hartford, CT 06103",
-        logo: "http://www.ghymca.org/images/layout/yLogoBlue.png",
-        description: "Ask for Anthony at the front office.",
-        dist: 0.8
-      },
-      {
         name: "Hartford Public Library",
         address: "744 Park St, Hartford, CT 06106",
         logo:
           "https://media.discordapp.net/attachments/271648227319742466/460492800199491595/Untitled.png",
         description: "Get others to sign up for the program!",
         dist: 0.6
+      },
+      {
+        name: "Downtown YMCA",
+        address: "90 State House Square, Hartford, CT 06103",
+        logo: "http://www.ghymca.org/images/layout/yLogoBlue.png",
+        description: "Ask for Anthony at the front office.",
+        dist: 0.8
       },
       {
         name: "Boys & Girls Club of Hartford",
