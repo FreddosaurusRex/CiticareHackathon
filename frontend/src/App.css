@@ -21,6 +21,19 @@
   background: inherit !important;
 }
 
+.popOutTop {
+    border-bottom: 5px solid #707070;
+    height: 50px;
+}
+
+.heavyLabel {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center;
+    color: #303e4d;
+}
+
 .divider {
   background: #f5f5f5;
 }

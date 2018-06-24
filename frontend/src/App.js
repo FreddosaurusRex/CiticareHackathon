@@ -5,6 +5,7 @@ import { Row } from "react-materialize";
 import Sidebar from "./components/Sidebar";
 import IncidentMap from "./components/IncidentMap";
 import ThirdPage from "./components/ThirdPage";
+import MedicalQA from "./components/MedicalQA";
 require("dotenv").config();
 
 export default class App extends Component {
@@ -20,6 +21,8 @@ export default class App extends Component {
         return <IncidentMap />;
       case 1:
         return <ThirdPage />;
+      case 2:
+        return <MedicalQA/>;
     }
   }
 
