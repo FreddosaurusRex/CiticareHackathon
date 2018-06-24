@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Navbar, NavItem, Icon, Button } from "react-materialize";
+import {Navbar, NavItem, Icon, Button, CardTitle, Card, Row, Col} from "react-materialize";
 
 export default class CasePage extends Component {
   state = {
@@ -85,22 +85,19 @@ export default class CasePage extends Component {
             padding: "20px"
           }}
         >
-          {this.state.locations.map(loc => {
-            return (
-              <div
-                style={{
-                  display: "inline-block",
-                  textAlign: "center",
-                  padding: "15px"
-                }}
-              >
-                <img style={{ height: "150px" }} src={loc.logo} />
-                <br />
-                <b>{loc.name}</b>
-                <p style={{ color: "grey" }}>{loc.dist}mi</p>
-              </div>
-            );
-          })}
+          <Row>
+            {this.state.locations.map(loc => {
+              return (
+                <Col s={12} m={3}>
+                  <Card className='small'
+                        header={<CardTitle image={loc.logo} />}>
+                    <b>{loc.name}</b>
+                    <p style={{ color: "grey" }}>{loc.dist}mi</p>
+                  </Card>
+                </Col>
+              );
+            })}
+          </Row>
         </div>
         <div style={{ padding: "40px" }}>
           <h5>
