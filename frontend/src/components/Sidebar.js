@@ -36,7 +36,7 @@ export default class Sidebar extends Component {
           }}
         />
         <SideNavItem icon="question_answer">
-          Q&A
+          MEDICAL Q&A
           <Badge newIcon>1</Badge>
         </SideNavItem>
         <SideNavItem icon="folder_shared">Resources</SideNavItem>
