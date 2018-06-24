@@ -11,7 +11,7 @@ require("dotenv").config();
 
 export default class App extends Component {
   state = {
-    page: 5
+    page: 0
   };
 
   setPage = page => this.setState({ page });

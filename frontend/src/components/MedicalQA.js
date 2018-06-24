@@ -6,7 +6,8 @@ import {
   CollectionItem,
   Navbar,
   Divider,
-  Card, Button
+  Card,
+  Button
 } from "react-materialize";
 
 export default class MedicalQA extends Component {
@@ -14,7 +15,7 @@ export default class MedicalQA extends Component {
     questions: [
       {
         q:
-          "Where should I go to get help for my child who has extreme anxiety after gunfight?",
+          "Where should I go to get help for my child who has extreme anxiety after witnessing a gunfight?",
         a: 2,
         lastAnswered: "3h"
       },
