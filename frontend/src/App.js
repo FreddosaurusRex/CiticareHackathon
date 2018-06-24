@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <Sidebar />
-        <Row style={{ paddingLeft: "320px" }}>
+        <Row style={{ paddingLeft: "300px", marginBottom: "0px" }}>
           <IncidentMap />
         </Row>
       </div>
