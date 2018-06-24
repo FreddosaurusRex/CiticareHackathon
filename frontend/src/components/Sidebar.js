@@ -65,7 +65,7 @@ export default class Sidebar extends Component {
         <SideNavItemPage icon="folder_shared" page={3}>
           Resources
         </SideNavItemPage>
-        <SideNavItem divider />
+        <SideNavItem divider style={{ marginTop: 0 }} />
         <SideNavItem subheader icon="business_center">
           CASES
           <Badge>

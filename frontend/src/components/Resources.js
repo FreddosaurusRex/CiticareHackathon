@@ -55,31 +55,8 @@ export default class Resources extends Component {
         logo: "http://www.ghymca.org/images/layout/yLogoBlue.png",
         description: "Ask for Anthony at the front office."
       }
-      //   {
-      //     name: "Hartford Public Library, Park Street Branch",
-      //     address: "744 Park St, Hartford, CT 06106",
-      //     logo: "https://www.hplct.org/assets/images/template/header_logo.jpg",
-      //     description: "Get others to sign up for the program!"
-      //   },
-      //   {
-      //     name: "Boys & Girls Club of Hartford",
-      //     address: "170 Sigourney St, Hartford, CT 06105",
-      //     logo:
-      //       "https://i1.wp.com/bgchartford.org/wp-content/uploads/2016/12/mainlogo.png?zoom=1.25&fit=480%2C140&ssl=1",
-      //     description: "Get your kids to join and participate in fun activities!"
-      //   }
     ]
   };
-
-  //   name: Boys & Girls Clubs of Hartford
-  // link: https://bgchartford.org/
-  // physical address: 170 Sigourney St, Hartford, CT 06105
-  // img link: https://i1.wp.com/bgchartford.org/wp-content/uploads/2016/12/mainlogo.png?zoom=1.25&fit=480%2C140&ssl=1
-
-  // name: Catholic Family Services
-  // link: https://www.hplct.org/
-  // physical address: 45 Wadsworth St # 4, Hartford, CT 06106
-  // img link: https://www.hplct.org/assets/images/template/header_logo.jpg
 
   render() {
     return (
