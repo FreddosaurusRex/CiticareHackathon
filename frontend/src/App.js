@@ -19,7 +19,7 @@ export default class App extends Component {
   getPage() {
     switch (this.state.page) {
       case 0:
-        return <IncidentMap />;
+        return <IncidentMap setPage={this.setPage} />;
       case 2:
         return <MedicalQA />;
       case 3:
